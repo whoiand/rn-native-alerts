@@ -10,10 +10,10 @@ import Foundation
 @objc(AlertModule)
 class AlertModule: RCTViewManager {
   
- @objc
- func invokeModal() {
+  @objc(invokeModal: message:)
+  func invokeModal(_ title: String, message: String) -> Void {
    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
-               let alert = UIAlertController(title: "title", message: "Alert just at launch", preferredStyle: .alert)
+               let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
                 let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in}
 

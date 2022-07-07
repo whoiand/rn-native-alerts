@@ -3,9 +3,12 @@ import {SafeAreaView, TouchableOpacity, Text} from 'react-native';
 import {AlertModule} from '../../moduleWrappers';
 import {homeStyles} from './Home.styles';
 
+const modalTitle = 'ModalTitle';
+const modalMessage = 'ModalMessage';
+
 const Home: React.FC = () => {
   const handleButtonPress = () => {
-    AlertModule.invokeModal();
+    AlertModule.invokeModal(modalTitle, modalMessage);
   };
 
   return (

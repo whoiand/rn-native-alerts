@@ -12,6 +12,6 @@
 
 @interface RCT_EXTERN_MODULE(AlertModule, NSObject);
 
-RCT_EXTERN_METHOD(invokeModal);
+RCT_EXTERN_METHOD(invokeModal: (NSString *)title message:(NSString *)message)
 
 @end
